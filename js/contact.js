@@ -416,7 +416,7 @@ function saveAddress() {
     
     // 在实际应用中，这里可以保存到本地存储或通讯录
     if (window.PrecisionMold && window.PrecisionMold.showNotification) {
-        window.PrecisionMold.showNotification('地址已保存！您可以在导航应用中搜索"精工模具制造"找到我们。', 'info');
+        window.PrecisionMold.showNotification('地址已保存！您可以在导航应用中搜索"杰威精密模具"找到我们。', 'info');
     }
 }
 
