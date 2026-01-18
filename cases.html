@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="展示我们的精密模具制造和零件加工成功案例，包括汽车、医疗、电子等行业应用">
+    <meta name="keywords" content="模具案例,成功案例,加工案例,行业应用">
+    <title>成功案例 - 精工模具制造</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cases.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+<body>
+    <!-- 页眉 -->
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-industry logo-icon"></i>
+                <h1>杰威精密模具</h1>
+            </a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="about.html">关于我们</a></li>
+                    <li><a href="capabilities.html">核心能力</a></li>
+                    <li><a href="services.html">产品服务</a></li>
+                    <li><a href="cases.html" class="active">成功案例</a></li>
+                    <li><a href="quality.html">质量体系</a></li>
+                    <li><a href="contact.html">联系我们</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 页面标题 -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>成功案例</h1>
+            <p>展示我们在精密模具制造和零件加工领域的专业能力与行业经验</p>
+        </div>
+    </section>
+
+    <!-- 案例筛选 -->
+    <section class="case-filters">
+        <div class="container">
+            <div class="filter-section">
+                <h3>按行业筛选</h3>
+                <div class="industry-filters">
+                    <button class="filter-btn active" data-filter="all">全部案例</button>
+                    <button class="filter-btn" data-filter="automotive">汽车行业</button>
+                    <button class="filter-btn" data-filter="medical">医疗器械</button>
+                    <button class="filter-btn" data-filter="electronics">消费电子</button>
+                    <button class="filter-btn" data-filter="communication">通信设备</button>
+                    <button class="filter-btn" data-filter="aerospace">航空航天</button>
+                </div>
+            </div>
+            
+            <div class="filter-section">
+                <h3>按服务类型筛选</h3>
+                <div class="service-filters">
+                    <button class="filter-btn" data-filter="mold">模具制造</button>
+                    <button class="filter-btn" data-filter="machining">零件加工</button>
+                    <button class="filter-btn" data-filter="design">模具设计</button>
+                    <button class="filter-btn" data-filter="testing">检测服务</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 案例展示 -->
+    <section class="cases-section">
+        <div class="container">
+            <!-- 案例网格 -->
+            <div class="cases-grid" id="casesGrid">
+                <!-- 案例1: 汽车发动机零件 -->
+                <div class="case-card" data-industry="automotive" data-service="machining" data-complexity="high">
+                    <div class="case-image">
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="汽车发动机零件">
+                        <div class="case-badge">
+                            <span class="badge industry">汽车行业</span>
+                            <span class="badge service">零件加工</span>
+                        </div>
+                    </div>
+                    <div class="case-content">
+                        <h3>汽车发动机精密零件</h3>
+                        <div class="case-meta">
+                            <span><i class="far fa-calendar"></i> 2023年5月</span>
+                            <span><i class="fas fa-industry"></i> 汽车零部件</span>
+                            <span><i class="fas fa-tachometer-alt"></i> 高精度</span>
+                        </div>
+                        <p class="case-excerpt">为某知名汽车制造商提供发动机涡轮增压器核心零件的五轴联动加工服务，精度要求±0.005mm...</p>
+                        <div class="case-challenge">
+                            <h4>技术挑战</h4>
+                            <p>复杂曲面加工、高温材料处理、严格的尺寸公差控制</p>
+                        </div>
+                        <button class="btn btn-secondary case-detail-btn" data-case="case1">查看详情</button>
+                    </div>
+                </div>
+
+                <!-- 案例2: 医疗手术器械模具 -->
+                <div class="case-card" data-industry="medical" data-service="mold" data-complexity="very-high">
+                    <div class="case-image">
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="医疗模具">
+                        <div class="case-badge">
+                            <span class="badge industry">医疗器械</span>
+                            <span class="badge service">模具制造</span>
+                        </div>
+                    </div>
+                    <div class="case-content">
+                        <h3>微创手术器械注塑模具</h3>
+                        <div class="case-meta">
+                            <span><i class="far fa-calendar"></i> 2023年3月</span>
+                            <span><i class="fas fa-industry"></i> 医疗设备</span>
+                            <span><i class="fas fa-tachometer-alt"></i> 超高精度</span>
+                        </div>
+                        <p class="case-excerpt">为医疗器械公司开发微创手术器械的精密注塑模具，实现复杂内腔结构和镜面抛光效果...</p>
+                        <div class="case-challenge">
+                            <h4>技术挑战</h4>
+                            <p>微细结构加工、医疗级抛光、生物兼容性材料</p>
+                        </div>
+                        <button class="btn btn-secondary case-detail-btn" data-case="case2">查看详情</button>
+                    </div>
+                </div>
+
+                <!-- 案例3: 电子产品外壳模具 -->
+                <div class="case-card" data-industry="electronics" data-service="mold" data-complexity="medium">
+                    <div class="case-image">
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="电子产品模具">
+                        <div class="case-badge">
+                            <span class="badge industry">消费电子</span>
+                            <span class="badge service">模具制造</span>
+                        </div>
+                    </div>
+                    <div class="case-content">
+                        <h3>智能手机精密结构件模具</h3>
+                        <div class="case-meta">
+                            <span><i class="far fa-calendar"></i> 2023年1月</span>
+                            <span><i class="fas fa-industry"></i> 消费电子</span>
+                            <span><i class="fas fa-tachometer-alt"></i> 中精度</span>
+                        </div>
+                        <p class="case-excerpt">为智能手机制造商开发精密结构件注塑模具，实现超薄壁厚和复杂卡扣结构...</p>
+                        <div class="case-challenge">
+                            <h4>技术挑战</h4>
+                            <p>薄壁注塑、快速冷却、多滑块结构</p>
+                        </div>
+                        <button class="btn btn-secondary case-detail-btn" data-case="case3">查看详情</button>
+                    </div>
+                </div>
+
+                <!-- 案例4: 通信设备零件 -->
+                <div class="case-card" data-industry="communication" data-service="machining" data-complexity="high">
+                    <div class="case-image">
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="通信设备零件">
+                        <div class="case-badge">
+                            <span class="badge industry">通信设备</span>
+                            <span class="badge service">零件加工</span>
+                        </div>
+                    </div>
+                    <div class="case-content">
+                        <h3>5G基站天线零件</h3>
+                        <div class="case-meta">
+                            <span><i class="far fa-calendar"></i> 2022年11月</span>
+                            <span><i class="fas fa-industry"></i> 通信设备</span>
+                            <span><i class="fas fa-tachometer-alt"></i> 高精度</span>
+                        </div>
+                        <p class="case-excerpt">为5G基站天线制造商加工精密波导零件，要求严格的尺寸稳定性和表面质量...</p>
+                        <div class="case-challenge">
+                            <h4>技术挑战</h4>
+                            <p>复杂曲面加工、铝合金变形控制、表面粗糙度要求</p>
+                        </div>
+                        <button class="btn btn-secondary case-detail-btn" data-case="case4">查看详情</button>
+                    </div>
+                </div>
+
+                <!-- 案例5: 航空发动机零件 -->
+                <div class="case-card" data-industry="aerospace" data-service="machining" data-complexity="very-high">
+                    <div class="case-image">
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="航空零件">
+                        <div class="case-badge">
+                            <span class="badge industry">航空航天</span>
+                            <span class="badge service">零件加工</span>
+                        </div>
+                    </div>
+                    <div class="case-content">
+                        <h3>航空发动机涡轮叶片</h3>
+                        <div class="case-meta">
+                            <span><i class="far fa-calendar"></i> 2022年8月</span>
+                            <span><i class="fas fa-industry"></i> 航空航天</span>
+                            <span><i class="fas fa-tachometer-alt"></i> 超高精度</span>
+                        </div>
+                        <p class="case-excerpt">加工航空发动机涡轮叶片，使用钛合金材料，要求极高的尺寸精度和表面完整性...</p>
+                        <div class="case-challenge">
+                            <h4>技术挑战</h4>
+                            <p>钛合金加工、复杂曲面、严格的材料性能要求</p>
+                        </div>
+                        <button class="btn btn-secondary case-detail-btn" data-case="case5">查看详情</button>
+                    </div>
+                </div>
+
+                <!-- 案例6: 模具设计优化 -->
+                <div class="case-card" data-industry="automotive" data-service="design" data-complexity="medium">
+                    <div class="case-image">
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="模具设计">
+                        <div class="case-badge">
+                            <span class="badge industry">汽车行业</span>
+                            <span class="badge service">模具设计</span>
+                        </div>
+                    </div>
+                    <div class="case-content">
+                        <h3>汽车内饰件模具设计优化</h3>
+                        <div class="case-meta">
+                            <span><i class="far fa-calendar"></i> 2022年6月</span>
+                            <span><i class="fas fa-industry"></i> 汽车内饰</span>
+                            <span><i class="fas fa-tachometer-alt"></i> 中精度</span>
+                        </div>
+                        <p class="case-excerpt">对现有汽车内饰件模具进行重新设计和优化，提高生产效率和产品质量...</p>
+                        <div class="case-challenge">
+                            <h4>技术挑战</h4>
+                            <p>模具结构优化、冷却系统改进、减少变形</p>
+                        </div>
+                        <button class="btn btn-secondary case-detail-btn" data-case="case6">查看详情</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 加载更多按钮 -->
+            <div class="load-more">
+                <button class="btn btn-primary" id="loadMoreBtn">
+                    <i class="fas fa-plus"></i> 加载更多案例
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 客户评价 -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>客户评价</h2>
+                <p>听听我们的客户怎么说</p>
+            </div>
+            
+            <div class="testimonials-slider">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p>"精工模具的专业团队为我们解决了长期困扰的模具精度问题，产品合格率从85%提升到99.5%，生产效率提高了30%。"</p>
+                    </div>
+                    <div class="client-info">
+                        <div class="client-avatar">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <div class="client-details">
+                            <h4>张总工程师</h4>
+                            <p>某汽车零部件公司</p>
+                            <div class="client-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p>"在医疗器械模具项目中，精工模具展现了极高的专业水平，不仅按时交付，还在产品设计上提出了很多有价值的改进建议。"</p>
+                    </div>
+                    <div class="client-info">
+                        <div class="client-avatar">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                        <div class="client-details">
+                            <h4>李博士</h4>
+                            <p>某医疗器械公司研发总监</p>
+                            <div class="client-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p>"与我们合作过的模具供应商中，精工模具的技术响应速度最快，解决问题的能力最强，是我们值得信赖的长期合作伙伴。"</p>
+                    </div>
+                    <div class="client-info">
+                        <div class="client-avatar">
+                            <i class="fas fa-user-cog"></i>
+                        </div>
+                        <div class="client-details">
+                            <h4>王经理</h4>
+                            <p>某电子制造公司采购总监</p>
+                            <div class="client-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 行业应用 -->
+    <section class="industries-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>行业应用</h2>
+                <p>为多个行业提供专业的模具和零件解决方案</p>
+            </div>
+            
+            <div class="industries-grid">
+                <div class="industry-card">
+                    <div class="industry-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <div class="industry-content">
+                        <h3>汽车行业</h3>
+                        <p>发动机零件、变速箱零件、内饰件、车灯模具</p>
+                        <ul>
+                            <li>涡轮增压器零件</li>
+                            <li>精密齿轮加工</li>
+                            <li>内饰注塑模具</li>
+                            <li>车灯反射镜模具</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="industry-card">
+                    <div class="industry-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <div class="industry-content">
+                        <h3>医疗器械</h3>
+                        <p>手术器械、诊断设备、植入物、医疗耗材模具</p>
+                        <ul>
+                            <li>微创手术器械</li>
+                            <li>检测设备零件</li>
+                            <li>医疗植入物</li>
+                            <li>一次性耗材模具</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="industry-card">
+                    <div class="industry-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <div class="industry-content">
+                        <h3>消费电子</h3>
+                        <p>手机结构件、笔记本零件、智能穿戴、连接器模具</p>
+                        <ul>
+                            <li>手机中框模具</li>
+                            <li>精密连接器</li>
+                            <li>智能手表零件</li>
+                            <li>散热器模具</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="industry-card">
+                    <div class="industry-icon">
+                        <i class="fas fa-satellite"></i>
+                    </div>
+                    <div class="industry-content">
+                        <h3>通信设备</h3>
+                        <p>基站天线、滤波器、波导、连接器、结构件</p>
+                        <ul>
+                            <li>5G天线零件</li>
+                            <li>滤波器腔体</li>
+                            <li>射频连接器</li>
+                            <li>机箱结构件</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 案例咨询 -->
+    <section class="case-consultation">
+        <div class="container">
+            <div class="consultation-content">
+                <h2>有类似的项目需求？</h2>
+                <p>我们拥有丰富的行业经验和专业技术团队，可以为您提供定制化的解决方案</p>
+                <div class="consultation-buttons">
+                    <a href="contact.html" class="btn btn-primary btn-large">
+                        <i class="fas fa-envelope"></i> 获取方案
+                    </a>
+                    <a href="tel:051288889999" class="btn btn-secondary btn-large">
+                        <i class="fas fa-phone-alt"></i> 电话咨询
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>精工模具制造</h3>
+                    <p>专注于高精度、高复杂度模具制造与精密零件加工，为各行业提供一站式解决方案。</p>
+                    <p>以先进设备、专业团队和严格质量控制，确保每一个产品都达到最高标准。</p>
+                </div>
+                <div class="footer-section">
+                    <h3>成功案例</h3>
+                    <ul>
+                        <li><a href="#" data-filter="automotive">汽车行业案例</a></li>
+                        <li><a href="#" data-filter="medical">医疗器械案例</a></li>
+                        <li><a href="#" data-filter="electronics">消费电子案例</a></li>
+                        <li><a href="#" data-filter="communication">通信设备案例</a></li>
+                        <li><a href="#" data-filter="aerospace">航空航天案例</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>联系我们</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> 东莞市石碣镇金滩路24号102室</li>
+                        <li><i class="fas fa-phone"></i> 15916852298</li>
+                        <li><i class="fas fa-envelope"></i> info@jiewei.taop</li>
+                        <li><i class="fas fa-clock"></i> 周一至周五 8:00-18:00</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; <span class="current-year">2023</span> 东莞市杰威精密模具配件有限公司. 版权所有.</p>
+                <p>粤ICP备12345678号</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 案例详情模态框 -->
+    <div id="caseModal" class="case-modal">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <div class="modal-body" id="modalBody">
+                <!-- 内容由JavaScript动态加载 -->
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript文件 -->
+    <script src="js/main.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/cases.js"></script>
+</body>
+</html>

@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="展示我们的质量管理体系、检测设备和质量控制流程，确保每一个产品都达到最高标准">
+    <meta name="keywords" content="质量管理,ISO认证,检测设备,质量控制,质量体系">
+    <title>质量体系 - 精工模具制造</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/quality.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+<body>
+    <!-- 页眉 -->
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-industry logo-icon"></i>
+                <h1>杰威精密模具</h1>
+            </a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="about.html">关于我们</a></li>
+                    <li><a href="capabilities.html">核心能力</a></li>
+                    <li><a href="services.html">产品服务</a></li>
+                    <li><a href="cases.html">成功案例</a></li>
+                    <li><a href="quality.html" class="active">质量体系</a></li>
+                    <li><a href="contact.html">联系我们</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 页面标题 -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>质量体系</h1>
+            <p>严格的质量控制体系，确保每一个产品都达到最高标准</p>
+        </div>
+    </section>
+
+    <!-- 质量理念 -->
+    <section class="quality-philosophy">
+        <div class="container">
+            <div class="philosophy-content">
+                <div class="philosophy-text">
+                    <h2>我们的质量理念</h2>
+                    <p>质量不是检验出来的，而是设计和制造出来的。我们坚信卓越的质量源于严谨的流程控制、先进的技术设备和专业的团队协作。</p>
+                    <p>从原材料采购到最终产品交付，我们实施全过程质量控制，确保每一个环节都符合最高标准。我们不仅仅满足于符合客户要求，更致力于超越客户期望。</p>
+                    <div class="philosophy-principles">
+                        <div class="principle-item">
+                            <i class="fas fa-bullseye"></i>
+                            <h4>零缺陷目标</h4>
+                            <p>追求完美，持续改进，实现零缺陷目标</p>
+                        </div>
+                        <div class="principle-item">
+                            <i class="fas fa-chart-line"></i>
+                            <h4>持续改进</h4>
+                            <p>基于数据分析，不断优化流程和工艺</p>
+                        </div>
+                        <div class="principle-item">
+                            <i class="fas fa-user-check"></i>
+                            <h4>客户满意</h4>
+                            <p>以客户为中心，满足并超越客户期望</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="philosophy-image">
+                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="质量理念">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 认证证书 -->
+    <section class="certifications-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>认证证书</h2>
+                <p>通过国际标准认证，确保质量管理体系的有效性</p>
+            </div>
+            
+            <div class="certifications-grid">
+                <div class="certification-card">
+                    <div class="certification-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="certification-content">
+                        <h3>ISO 9001:2015</h3>
+                        <p>质量管理体系认证</p>
+                        <div class="certification-details">
+                            <p><strong>认证范围：</strong>精密模具设计、制造和销售</p>
+                            <p><strong>认证机构：</strong>德国莱茵TÜV</p>
+                            <p><strong>认证日期：</strong>2022年5月</p>
+                            <p><strong>有效期至：</strong>2025年5月</p>
+                        </div>
+                        <button class="btn btn-secondary view-certificate" data-cert="iso9001">查看证书</button>
+                    </div>
+                </div>
+                
+                <div class="certification-card">
+                    <div class="certification-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="certification-content">
+                        <h3>IATF 16949:2016</h3>
+                        <p>汽车行业质量管理体系</p>
+                        <div class="certification-details">
+                            <p><strong>认证范围：</strong>汽车零部件模具制造</p>
+                            <p><strong>认证机构：</strong>SGS通标标准</p>
+                            <p><strong>认证日期：</strong>2023年1月</p>
+                            <p><strong>有效期至：</strong>2026年1月</p>
+                        </div>
+                        <button class="btn btn-secondary view-certificate" data-cert="iatf16949">查看证书</button>
+                    </div>
+                </div>
+                
+                <div class="certification-card">
+                    <div class="certification-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <div class="certification-content">
+                        <h3>ISO 13485:2016</h3>
+                        <p>医疗器械质量管理体系</p>
+                        <div class="certification-details">
+                            <p><strong>认证范围：</strong>医疗器械模具制造</p>
+                            <p><strong>认证机构：</strong>德国莱茵TÜV</p>
+                            <p><strong>认证日期：</strong>2023年3月</p>
+                            <p><strong>有效期至：</strong>2026年3月</p>
+                        </div>
+                        <button class="btn btn-secondary view-certificate" data-cert="iso13485">查看证书</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 质量控制流程 -->
+    <section class="quality-process">
+        <div class="container">
+            <div class="section-title">
+                <h2>质量控制流程</h2>
+                <p>实施全过程质量控制，确保每一个环节都符合标准</p>
+            </div>
+            
+            <div class="process-timeline">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>原材料检验</h3>
+                        <p>对所有进厂原材料进行严格检验，包括材质证明、尺寸精度、硬度等指标，确保材料符合技术要求。</p>
+                        <div class="step-tools">
+                            <span><i class="fas fa-vial"></i> 材质分析仪</span>
+                            <span><i class="fas fa-ruler"></i> 精密测量工具</span>
+                            <span><i class="fas fa-balance-scale"></i> 硬度计</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>制程控制</h3>
+                        <p>在加工过程中实施实时监控，包括尺寸测量、表面检查、工艺参数控制，确保加工质量稳定。</p>
+                        <div class="step-tools">
+                            <span><i class="fas fa-search"></i> 在线测量</span>
+                            <span><i class="fas fa-chart-bar"></i> SPC统计</span>
+                            <span><i class="fas fa-cogs"></i> 工艺监控</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>成品检验</h3>
+                        <p>使用三坐标测量机、影像测量仪等高精度设备进行最终检验，确保产品完全符合图纸要求。</p>
+                        <div class="step-tools">
+                            <span><i class="fas fa-crosshairs"></i> 三坐标测量</span>
+                            <span><i class="fas fa-eye"></i> 影像测量</span>
+                            <span><i class="fas fa-file-alt"></i> 检验报告</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>出货检验</h3>
+                        <p>在发货前进行最终检查，包括包装、标识、文件完整性，确保客户收到的产品完美无缺。</p>
+                        <div class="step-tools">
+                            <span><i class="fas fa-clipboard-check"></i> 最终检查</span>
+                            <span><i class="fas fa-box"></i> 包装检验</span>
+                            <span><i class="fas fa-shipping-fast"></i> 发货确认</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 检测设备 -->
+    <section class="testing-equipment">
+        <div class="container">
+            <div class="section-title">
+                <h2>检测设备</h2>
+                <p>先进的高精度检测设备，确保测量数据的准确可靠</p>
+            </div>
+            
+            <div class="equipment-grid">
+                <div class="equipment-card">
+                    <div class="equipment-image">
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="三坐标测量机">
+                    </div>
+                    <div class="equipment-content">
+                        <h3>三坐标测量机 (CMM)</h3>
+                        <div class="equipment-specs">
+                            <p><strong>品牌型号：</strong>海克斯康 GLOBAL S 7.10.7</p>
+                            <p><strong>测量范围：</strong>700×1000×600mm</p>
+                            <p><strong>测量精度：</strong>±0.002mm</p>
+                            <p><strong>软件系统：</strong>PC-DMIS 2022</p>
+                        </div>
+                        <div class="equipment-features">
+                            <h4>主要功能：</h4>
+                            <ul>
+                                <li>复杂形状尺寸测量</li>
+                                <li>形位公差检测</li>
+                                <li>逆向工程扫描</li>
+                                <li>自动化测量程序</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="equipment-card">
+                    <div class="equipment-image">
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="影像测量仪">
+                    </div>
+                    <div class="equipment-content">
+                        <h3>二次元影像测量仪</h3>
+                        <div class="equipment-specs">
+                            <p><strong>品牌型号：</strong>OGP SmartScope Flash 500</p>
+                            <p><strong>测量范围：</strong>500×400×200mm</p>
+                            <p><strong>测量精度：</strong>±0.003mm</p>
+                            <p><strong>放大倍数：</strong>20×-200×</p>
+                        </div>
+                        <div class="equipment-features">
+                            <h4>主要功能：</h4>
+                            <ul>
+                                <li>二维尺寸快速测量</li>
+                                <li>轮廓形状检测</li>
+                                <li>表面缺陷检查</li>
+                                <li>批量自动检测</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="equipment-card">
+                    <div class="equipment-image">
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="表面粗糙度仪">
+                    </div>
+                    <div class="equipment-content">
+                        <h3>表面粗糙度仪</h3>
+                        <div class="equipment-specs">
+                            <p><strong>品牌型号：</strong>Mitutoyo SJ-410</p>
+                            <p><strong>测量范围：</strong>Ra 0.01-40μm</p>
+                            <p><strong>测量精度：</strong>±5%</p>
+                            <p><strong>探针类型：</strong>金刚石探针</p>
+                        </div>
+                        <div class="equipment-features">
+                            <h4>主要功能：</h4>
+                            <ul>
+                                <li>表面粗糙度测量</li>
+                                <li>轮廓形状分析</li>
+                                <li>波纹度检测</li>
+                                <li>表面纹理分析</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="equipment-card">
+                    <div class="equipment-image">
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="材料分析设备">
+                    </div>
+                    <div class="equipment-content">
+                        <h3>材料分析设备</h3>
+                        <div class="equipment-specs">
+                            <p><strong>硬度计：</strong>洛氏、维氏、布氏</p>
+                            <p><strong>金相显微镜：</strong>Olympus GX53</p>
+                            <p><strong>光谱仪：</strong>牛津Foundry-Master</p>
+                            <p><strong>拉伸试验机：</strong>Instron 5982</p>
+                        </div>
+                        <div class="equipment-features">
+                            <h4>主要功能：</h4>
+                            <ul>
+                                <li>材料硬度测试</li>
+                                <li>金相组织分析</li>
+                                <li>化学成分检测</li>
+                                <li>力学性能测试</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 质量文件 -->
+    <section class="quality-documents">
+        <div class="container">
+            <div class="section-title">
+                <h2>质量文件</h2>
+                <p>完整的质量文件体系，确保质量管理的规范化和可追溯性</p>
+            </div>
+            
+            <div class="documents-grid">
+                <div class="document-category">
+                    <h3><i class="fas fa-clipboard-list"></i> 质量手册</h3>
+                    <ul>
+                        <li><a href="#" class="document-link"><i class="far fa-file-pdf"></i> 质量手册 QM-001</a></li>
+                        <li><a href="#" class="document-link"><i class="far fa-file-pdf"></i> 质量方针和目标</a></li>
+                        <li><a href="#" class="document-link"><i class="far fa-file-pdf"></i> 组织结构与职责</a></li>
+                        <li><a href="#" class="document-link"><i class="far fa-file-pdf"></i> 质量管理体系范围</a></li>
+                    </ul>
+                </div>
+                
+                <div class="document-category">
+                    <h3><i class="fas fa-cogs"></i> 程序文件</h3>
+                    <ul>
+                        <li><a href="#" class="document-link"><i class="far fa-file-pdf"></i> 设计控制程序</a></li>
+                        <li><a href="#" class="document-link"><i class="far fa-file-pdf"></i> 采购控制程序</a></li>
+                        <li><a href="#" class="document-link"><i class="far fa-file-pdf"></i> 生产过程控制程序</a></li>
+                        <li><a href="#" class="document-link"><i class="far fa-file-pdf"></i> 检验和试验程序</a></li>
+                    </ul>
+                </div>
+                
+                <div class="document-category">
+                    <h3><i class="fas fa-file-alt"></i> 作业指导书</h3>
+                    <ul>
+                        <li><a href="#" class="document-link"><i class="far fa-file-pdf"></i> CNC加工作业指导书</a></li>
+                        <li><a href="#" class="document-link"><i class="far fa-file-pdf"></i> 检测设备操作规程</a></li>
+                        <li><a href="#" class="document-link"><i class="far fa-file-pdf"></i> 模具装配作业指导书</a></li>
+                        <li><a href="#" class="document-link"><i class="far fa-file-pdf"></i> 表面处理作业指导书</a></li>
+                    </ul>
+                </div>
+                
+                <div class="document-category">
+                    <h3><i class="fas fa-chart-line"></i> 质量记录</h3>
+                    <ul>
+                        <li><a href="#" class="document-link"><i class="far fa-file-excel"></i> 检验记录表格</a></li>
+                        <li><a href="#" class="document-link"><i class="far fa-file-excel"></i> 不合格品处理记录</a></li>
+                        <li><a href="#" class="document-link"><i class="far fa-file-excel"></i> 客户投诉处理记录</a></li>
+                        <li><a href="#" class="document-link"><i class="far fa-file-excel"></i> 管理评审记录</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="document-download">
+                <p><i class="fas fa-info-circle"></i> 如需查看完整的质量文件，请通过正式渠道申请。</p>
+                <button class="btn btn-primary" id="requestDocuments">
+                    <i class="fas fa-download"></i> 申请质量文件
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 质量改进 -->
+    <section class="quality-improvement">
+        <div class="container">
+            <div class="section-title">
+                <h2>持续改进</h2>
+                <p>基于数据分析的质量改进系统，不断提升产品质量和客户满意度</p>
+            </div>
+            
+            <div class="improvement-methods">
+                <div class="method-card">
+                    <div class="method-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <div class="method-content">
+                        <h3>统计过程控制 (SPC)</h3>
+                        <p>实时监控生产过程，通过统计分析及时发现和纠正异常，确保过程稳定受控。</p>
+                        <ul>
+                            <li>关键特性监控</li>
+                            <li>过程能力分析</li>
+                            <li>控制图应用</li>
+                            <li>异常报警系统</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="method-card">
+                    <div class="method-icon">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <div class="method-content">
+                        <h3>8D问题解决方法</h3>
+                        <p>系统化的问题解决流程，确保根本原因分析准确，纠正措施有效，防止问题复发。</p>
+                        <ul>
+                            <li>问题描述</li>
+                            <li>临时措施</li>
+                            <li>根本原因分析</li>
+                            <li>纠正措施验证</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="method-card">
+                    <div class="method-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <div class="method-content">
+                        <h3>质量改进项目 (QIP)</h3>
+                        <p>针对性的质量改进项目，通过团队协作和系统方法，解决重大质量问题。</p>
+                        <ul>
+                            <li>项目立项</li>
+                            <li>现状分析</li>
+                            <li>改进实施</li>
+                            <li>效果验证</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="improvement-stats">
+                <h3>质量改进成果</h3>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-value">99.5%</div>
+                        <div class="stat-label">产品合格率</div>
+                        <div class="stat-trend up">
+                            <i class="fas fa-arrow-up"></i> 较去年提升0.8%
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">65%</div>
+                        <div class="stat-label">客户投诉减少</div>
+                        <div class="stat-trend up">
+                            <i class="fas fa-arrow-up"></i> 较去年改善显著
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">1.78</div>
+                        <div class="stat-label">过程能力指数 (CPK)</div>
+                        <div class="stat-trend up">
+                            <i class="fas fa-arrow-up"></i> 达到优秀水平
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">98.9%</div>
+                        <div class="stat-label">客户满意度</div>
+                        <div class="stat-trend up">
+                            <i class="fas fa-arrow-up"></i> 持续保持高位
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 质量咨询 -->
+    <section class="quality-consultation">
+        <div class="container">
+            <div class="consultation-content">
+                <h2>关注产品质量？</h2>
+                <p>我们愿意分享质量管理经验，并为您的项目提供专业的质量保证方案</p>
+                <div class="consultation-buttons">
+                    <a href="contact.html" class="btn btn-primary btn-large">
+                        <i class="fas fa-clipboard-check"></i> 质量咨询
+                    </a>
+                    <button class="btn btn-secondary btn-large" id="requestAudit">
+                        <i class="fas fa-search"></i> 申请工厂审核
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>精工模具制造</h3>
+                    <p>专注于高精度、高复杂度模具制造与精密零件加工，为各行业提供一站式解决方案。</p>
+                    <p>以先进设备、专业团队和严格质量控制，确保每一个产品都达到最高标准。</p>
+                </div>
+                <div class="footer-section">
+                    <h3>质量体系</h3>
+                    <ul>
+                        <li><a href="#certifications">认证证书</a></li>
+                        <li><a href="#process">质量控制流程</a></li>
+                        <li><a href="#equipment">检测设备</a></li>
+                        <li><a href="#documents">质量文件</a></li>
+                        <li><a href="#improvement">持续改进</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>联系我们</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> 东莞市石碣镇金滩路24号102室</li>
+                        <li><i class="fas fa-phone"></i> 15916852298</li>
+                        <li><i class="fas fa-envelope"></i> info@jiewei.taop</li>
+                        <li><i class="fas fa-clock"></i> 周一至周五 8:00-18:00</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; <span class="current-year">2023</span> 东莞市杰威精密模具配件有限公司. 版权所有.</p>
+                <p>粤ICP备1245678号</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 证书查看模态框 -->
+    <div id="certificateModal" class="certificate-modal">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <div class="modal-body" id="certificateBody">
+                <!-- 内容由JavaScript动态加载 -->
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript文件 -->
+    <script src="js/main.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/quality.js"></script>
+</body>
+</html>
