@@ -343,7 +343,7 @@ function showMapDetail() {
         <div class="map-detail">
             <h3>工厂位置详情</h3>
             <div class="address-info">
-                <p><strong>完整地址：</strong>东莞市石碣镇金滩路24号102室，邮编：215000</p>
+                <p><strong>完整地址：</strong>东莞市石碣镇金滩路24号102室，邮编：523295</p>
                 <p><strong>导航坐标：</strong>经度 113.92225608324155，纬度 23.105835978761775</p>
                 <p><strong>周边地标：</strong>豪威纸品厂厂区内</p>
             </div>
