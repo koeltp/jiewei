@@ -55,8 +55,8 @@
                     <div class="contact-content">
                         <h3>公司地址</h3>
                         <p>东莞市石碣镇<br/>金滩路24号102室<br>邮编：523295</p>
-                        <button class="btn btn-secondary" id="viewMap">
-                            <i class="fas fa-directions"></i> 查看地图
+                        <button class="btn btn-secondary" id="copyAddressBtn">
+                            <i class="fas fa-copy"></i> 复制地址
                         </button>
                     </div>
                 </div>
@@ -69,7 +69,7 @@
                         <h3>联系电话</h3>
                         <p>总机：15916852298<br>销售部：0512-8888 8888<br>技术支持：0512-8888 7777</p>
                         <div class="contact-action">
-                            <a href="tel:051288889999" class="btn btn-primary">
+                            <a href="tel:15916852298" class="btn btn-primary">
                                 <i class="fas fa-phone"></i> 立即拨打
                             </a>
                         </div>
@@ -99,125 +99,12 @@
                         <h3>工作时间</h3>
                         <p>周一至周五：8:00 - 18:00<br>周六：9:00 - 12:00<br>周日：休息</p>
                         <div class="contact-action">
-                            <button class="btn btn-secondary" id="scheduleVisit">
-                                <i class="fas fa-calendar-alt"></i> 预约拜访
-                            </button>
+                            <a href="tel:15916852298" class="btn btn-secondary">
+                                <i class="fas fa-phone"></i> 电话咨询
+                            </a>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 联系表单 -->
-    <section class="contact-form-section">
-        <div class="container">
-            <div class="section-title">
-                <h2>在线咨询</h2>
-                <p>请填写以下表单，我们的专业团队将在24小时内回复您</p>
-            </div>
-            
-            <div class="form-container">
-                <form id="contactForm" class="contact-form">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="name">姓名 *</label>
-                            <input type="text" id="name" name="name" required placeholder="请输入您的姓名">
-                            <div class="error-message" id="nameError"></div>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="company">公司名称 *</label>
-                            <input type="text" id="company" name="company" required placeholder="请输入您的公司名称">
-                            <div class="error-message" id="companyError"></div>
-                        </div>
-                    </div>
-                    
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="phone">联系电话 *</label>
-                            <input type="tel" id="phone" name="phone" required placeholder="请输入您的联系电话">
-                            <div class="error-message" id="phoneError"></div>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="email">电子邮箱 *</label>
-                            <input type="email" id="email" name="email" required placeholder="请输入您的电子邮箱">
-                            <div class="error-message" id="emailError"></div>
-                        </div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="serviceType">咨询类型 *</label>
-                        <select id="serviceType" name="serviceType" required>
-                            <option value="">请选择咨询类型</option>
-                            <option value="mold_design">模具设计</option>
-                            <option value="mold_manufacturing">模具制造</option>
-                            <option value="parts_processing">零件加工</option>
-                            <option value="testing_service">检测服务</option>
-                            <option value="maintenance">维修保养</option>
-                            <option value="quotation">获取报价</option>
-                            <option value="technical_consultation">技术咨询</option>
-                            <option value="cooperation">合作洽谈</option>
-                            <option value="other">其他</option>
-                        </select>
-                        <div class="error-message" id="serviceTypeError"></div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="industry">所属行业</label>
-                        <select id="industry" name="industry">
-                            <option value="">请选择所属行业</option>
-                            <option value="automotive">汽车行业</option>
-                            <option value="medical">医疗器械</option>
-                            <option value="electronics">消费电子</option>
-                            <option value="communication">通信设备</option>
-                            <option value="aerospace">航空航天</option>
-                            <option value="home_appliances">家用电器</option>
-                            <option value="industrial_equipment">工业设备</option>
-                            <option value="other_industry">其他行业</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="message">项目需求描述 *</label>
-                        <textarea id="message" name="message" rows="6" required placeholder="请详细描述您的项目需求、技术要求、预算范围、时间要求等"></textarea>
-                        <div class="error-message" id="messageError"></div>
-                        <div class="character-count">
-                            <span id="charCount">0</span>/1000 字符
-                        </div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label>上传相关文件（可选）</label>
-                        <div class="file-upload">
-                            <input type="file" id="fileUpload" name="files" multiple accept=".pdf,.jpg,.jpeg,.png,.dwg,.dxf,.step,.stp,.igs,.iges">
-                            <label for="fileUpload" class="upload-label">
-                                <i class="fas fa-cloud-upload-alt"></i>
-                                <span>点击选择文件或拖放文件到这里</span>
-                            </label>
-                            <div class="file-preview" id="filePreview"></div>
-                            <small class="form-text">支持PDF、图片、CAD图纸等格式，单个文件不超过10MB</small>
-                        </div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <div class="checkbox-group">
-                            <input type="checkbox" id="agreeTerms" name="agreeTerms" required>
-                            <label for="agreeTerms">我同意<a href="#" id="privacyPolicyLink">隐私政策</a>，并允许杰威精密模具联系我</label>
-                        </div>
-                        <div class="error-message" id="termsError"></div>
-                    </div>
-                    
-                    <div class="form-actions">
-                        <button type="submit" class="btn btn-primary btn-large" id="submitBtn">
-                            <i class="fas fa-paper-plane"></i> 提交咨询
-                        </button>
-                        <button type="reset" class="btn btn-secondary btn-large">
-                            <i class="fas fa-redo"></i> 重置表单
-                        </button>
-                    </div>
-                </form>
             </div>
         </div>
     </section>
@@ -235,10 +122,22 @@
                     <!-- 这里可以嵌入百度地图或Google地图 -->
                     <div class="map-placeholder" id="mapPlaceholder">
                         <div class="map-overlay">
-                            <h3>东莞市杰威精密模具配件有限公司</h3>
-                            <p><i class="fas fa-map-marker-alt"></i> 东莞市石碣镇金滩路24号102室</p>
-                            <p><i class="fas fa-phone"></i> 15916852298</p>
-                            <p><i class="fas fa-clock"></i> 周一至周五 8:00-18:00</p>
+                            <h3 class="company-title">东莞市杰威精密模具配件有限公司</h3>
+                            <div class="address-line">
+                                <i class="fas fa-map-marker-alt"></i> 
+                                <span>东莞市石碣镇金滩路24号102室 <i class="fas fa-copy copy-icon" id="copyAddressIcon"></i></span>
+                            </div>
+                            <p class="address-line">
+                                <i class="fas fa-building"></i> 
+                                <strong>周边地标：</strong>豪威纸品厂厂区内</p>
+                            <div class="contact-line">
+                                <i class="fas fa-phone"></i> 
+                                <span>15916852298</span>
+                            </div>
+                            <div class="contact-line">
+                                <i class="fas fa-clock"></i> 
+                                <span>周一至周五 8:00-18:00</span>
+                            </div>
                             <button class="btn btn-primary" id="openMap">
                                 <i class="fas fa-external-link-alt"></i> 在百度地图中打开
                             </button>
@@ -280,16 +179,6 @@
                                 <p>导航搜索"东莞市杰威精密模具配件有限公司"，园区提供充足的停车位</p>
                             </div>
                         </div>
-                    </div>
-                    
-                    <div class="visiting-tips">
-                        <h4>拜访提示</h4>
-                        <ul>
-                            <li>请提前预约以确保有相关技术人员接待</li>
-                            <li>建议携带身份证件办理访客登记</li>
-                            <li>工厂参观请遵守安全规定，佩戴安全帽</li>
-                            <li>可提前发送技术资料以便我们准备</li>
-                        </ul>
                     </div>
                 </div>
             </div>
@@ -451,7 +340,7 @@
             </div>
             
             <div class="faq-more">
-                <p>还有更多问题？<a href="#contactForm" class="faq-contact-link">立即咨询我们的专家</a></p>
+                <p>还有更多问题？<a href="tel:15916852298" class="faq-contact-link">立即拨打热线电话</a></p>
             </div>
         </div>
     </section>
@@ -463,18 +352,10 @@
                 <h2>需要立即帮助？</h2>
                 <p>如果您有紧急需求，请直接拨打我们的热线电话或使用以下快速联系方式</p>
                 <div class="quick-contact-buttons">
-                    <a href="tel:051288889999" class="quick-contact-btn phone">
+                    <a href="tel:15916852298" class="quick-contact-btn phone">
                         <i class="fas fa-phone-alt"></i>
                         <span>紧急热线<br><strong>15916852298</strong></span>
                     </a>
-                    <a href="https://wa.me/8613800138000" class="quick-contact-btn whatsapp" target="_blank">
-                        <i class="fab fa-whatsapp"></i>
-                        <span>WhatsApp<br><strong>+86 138 0013 8000</strong></span>
-                    </a>
-                    <button class="quick-contact-btn wechat" id="wechatBtn">
-                        <i class="fab fa-weixin"></i>
-                        <span>微信公众号<br><strong>杰威精密模具</strong></span>
-                    </button>
                     <a href="mailto:sales@jiewei.top" class="quick-contact-btn email">
                         <i class="fas fa-envelope"></i>
                         <span>发送邮件<br><strong>sales@jiewei.top</strong></span>
@@ -498,54 +379,21 @@
                     <ul class="contact-info">
                         <li><i class="fas fa-map-marker-alt"></i> 东莞市石碣镇金滩路24号102室</li>
                         <li><i class="fas fa-phone"></i> 15916852298</li>
-                        <li><i class="fas fa-envelope"></i> info@jiewei.taop</li>
+                        <li><i class="fas fa-envelope"></i> info@jiewei.top</li>
                         <li><i class="fas fa-clock"></i> 周一至周五 8:00-18:00</li>
                     </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>关注我们</h3>
-                    <div class="social-links">
-                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-weibo"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-weixin"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
-                    </div>
-                    <div class="newsletter">
-                        <p>订阅我们的技术资讯</p>
-                        <form class="newsletter-form">
-                            <input type="email" placeholder="输入您的邮箱" required>
-                            <button type="submit"><i class="fas fa-paper-plane"></i></button>
-                        </form>
-                    </div>
                 </div>
             </div>
             <div class="copyright">
                 <p>&copy; <span class="current-year">2023</span> 东莞市杰威精密模具配件有限公司. 版权所有.</p>
-                <p>粤ICP备12345678号 | <a href="#" id="privacyLink">隐私政策</a> | <a href="#" id="termsLink">服务条款</a></p>
+                <p class="footer-links">
+                    <span>粤ICP备12345678号</span> | 
+                    <a href="#" id="privacyLink" class="footer-link">隐私政策</a> | 
+                    <a href="#" id="termsLink" class="footer-link">服务条款</a>
+                </p>
             </div>
         </div>
     </footer>
-
-    <!-- 微信二维码模态框 -->
-    <div id="wechatModal" class="wechat-modal">
-        <div class="modal-content">
-            <button class="modal-close">&times;</button>
-            <div class="modal-body">
-                <h3>关注微信公众号</h3>
-                <div class="qrcode-container">
-                    <div class="qrcode-placeholder">
-                        <i class="fab fa-weixin"></i>
-                        <p>微信公众号二维码</p>
-                    </div>
-                </div>
-                <p class="qrcode-instruction">使用微信扫描二维码关注我们，获取最新技术资讯和行业动态</p>
-                <div class="wechat-info">
-                    <p><strong>微信公众号：</strong>杰威精密模具</p>
-                    <p><strong>功能：</strong>技术文章、案例分享、在线咨询</p>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- JavaScript文件 -->
     <script src="js/main.js"></script>

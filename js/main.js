@@ -2,8 +2,7 @@
 
 // 页面加载完成后的初始化
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('精密模具工厂网站已加载');
-    
+
     // 初始化所有组件
     initNavigation();
     initAnimations();
