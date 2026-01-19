@@ -2,7 +2,7 @@
 
 // 页面加载完成后的初始化
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('关于我们页面已加载');
+    console.log('关于我们页面已加载 - 东莞市杰威精密模具配件有限公司');
     
     // 初始化时间线动画
     initTimelineAnimation();
@@ -15,7 +15,20 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // 初始化页面滚动动画
     initScrollAnimation();
+    
+    // 设置当前年份
+    setCurrentYear();
 });
+
+// 设置当前年份
+function setCurrentYear() {
+    const yearElements = document.querySelectorAll('.current-year');
+    const currentYear = new Date().getFullYear();
+    
+    yearElements.forEach(element => {
+        element.textContent = currentYear;
+    });
+}
 
 // 时间线滚动动画
 function initTimelineAnimation() {
@@ -187,6 +200,60 @@ function showLeaderDetail(data) {
     // 创建详情弹窗
     const modal = document.createElement('div');
     modal.className = 'leader-modal';
+    
+    // 根据不同的领导提供不同的详细介绍
+    let detailedBio = '';
+    let detailedEducation = '';
+    
+    if (data.name === '蒋雪飞') {
+        detailedBio = `
+            <p>蒋雪飞先生是东莞市杰威精密模具配件有限公司的创始人兼法定代表人，自2015年公司成立以来，一直担任公司总经理职务。</p>
+            <p>蒋先生深耕制造业多年，对精密加工行业有着深刻的理解和独到的见解。在他的带领下，公司从初创期的小规模加工厂，逐步发展成为如今拥有3500平方米生产面积、50多名专业员工、年服务客户超过200家的现代化企业。</p>
+            <p>他始终坚持"质量为本、客户至上"的经营理念，注重技术创新和工艺改进，带领团队攻克了多个技术难题，赢得了客户的广泛信任和赞誉。</p>
+        `;
+        detailedEducation = `
+            <p><i class="fas fa-user-tie"></i> 法定代表人，全面负责公司战略规划与运营管理</p>
+            <p><i class="fas fa-lightbulb"></i> 对精密制造行业有深刻理解，擅长企业战略规划与市场开拓</p>
+            <p><i class="fas fa-handshake"></i> 注重客户关系维护，建立长期稳定的合作伙伴关系</p>
+        `;
+    } else if (data.name === '陈志强') {
+        detailedBio = `
+            <p>陈志强先生担任公司生产经理，拥有12年精密加工生产管理经验，是公司生产运营的核心骨干。</p>
+            <p>他精通各类数控设备的加工工艺与编程，擅长生产流程优化和效率提升。在陈经理的带领下，公司生产效率逐年提升15%以上，产品不良率持续下降。</p>
+            <p>他注重现场管理和团队建设，培养了一支技术过硬、责任心强的生产团队，确保每个订单都能按时、按质、按量完成。</p>
+        `;
+        detailedEducation = `
+            <p><i class="fas fa-cogs"></i> 擅长CNC编程、工艺改善与成本控制</p>
+            <p><i class="fas fa-chart-line"></i> 精通精益生产管理，持续优化生产流程</p>
+            <p><i class="fas fa-users"></i> 注重团队建设与员工技能培训</p>
+        `;
+    } else if (data.name === '王工') {
+        detailedBio = `
+            <p>王工担任公司技术主管，拥有10年模具与治夹具设计经验，是公司技术团队的核心成员。</p>
+            <p>他精通CAD/CAM软件，能够快速理解客户需求，提供经济可靠的加工方案。在技术难题攻关方面有突出表现，曾主导多个复杂零件的工艺开发项目。</p>
+            <p>王工注重技术积累和经验分享，建立了公司内部的技术知识库，为年轻技术人员提供指导和培训。</p>
+        `;
+        detailedEducation = `
+            <p><i class="fas fa-laptop-code"></i> 精通CAD/CAM软件，专注工艺可行性分析</p>
+            <p><i class="fas fa-tools"></i> 擅长复杂零件加工工艺设计</p>
+            <p><i class="fas fa-book"></i> 建立公司技术知识库，培养技术人才</p>
+        `;
+    } else if (data.name === '李芳') {
+        detailedBio = `
+            <p>李芳女士担任公司品控主管，拥有8年精密零件质检经验，是公司质量体系的守护者。</p>
+            <p>她建立了完善的质量控制流程和检验标准，确保从原材料入库到成品出厂的每一个环节都符合质量要求。在她的严格把关下，公司产品出厂合格率连续三年保持在99.8%以上。</p>
+            <p>李主管注重检测设备的维护和更新，定期组织质量培训，提升全员质量意识，为客户提供可靠的质量保障。</p>
+        `;
+        detailedEducation = `
+            <p><i class="fas fa-search"></i> 熟练操作各类精密测量仪器</p>
+            <p><i class="fas fa-clipboard-check"></i> 建立完善的质量控制体系</p>
+            <p><i class="fas fa-chart-bar"></i> 擅长质量数据分析与改进</p>
+        `;
+    } else {
+        detailedBio = data.bio;
+        detailedEducation = data.education;
+    }
+    
     modal.innerHTML = `
         <div class="modal-content">
             <button class="modal-close">&times;</button>
@@ -201,16 +268,15 @@ function showLeaderDetail(data) {
                         <p class="modal-leader-experience">${data.experience}</p>
                         <div class="modal-leader-bio">
                             <h3>个人简介</h3>
-                            <p>${data.bio}</p>
-                            <p>在精密模具制造领域拥有丰富经验，带领团队完成多项技术突破和创新项目。注重团队建设和人才培养，建立了完善的技术和管理体系。</p>
+                            ${detailedBio}
                         </div>
                         <div class="modal-leader-education">
-                            <h3>教育背景</h3>
-                            <p>${data.education}</p>
+                            <h3>专业能力</h3>
+                            ${detailedEducation}
                             <ul>
-                                <li>拥有多项国家发明专利</li>
-                                <li>多次获得行业技术创新奖</li>
-                                <li>发表专业论文多篇</li>
+                                <li>多次获得客户质量表彰</li>
+                                <li>参与多项工艺改进项目</li>
+                                <li>培养多名技术骨干</li>
                             </ul>
                         </div>
                     </div>
@@ -221,7 +287,7 @@ function showLeaderDetail(data) {
     
     document.body.appendChild(modal);
     
-    // 添加模态框样式
+    // 添加模态框样式（如果尚未添加）
     addModalStyles();
     
     // 显示模态框
@@ -384,6 +450,7 @@ function addModalStyles() {
         .modal-leader-education ul {
             list-style: none;
             padding-left: 0;
+            margin-top: 15px;
         }
         
         .modal-leader-education li {
@@ -449,17 +516,31 @@ function animateCounter(element) {
     const originalText = element.textContent;
     const target = parseFloat(originalText.replace(/[^0-9.]/g, ''));
     const hasPlus = originalText.includes('+');
+    const isPercent = originalText.includes('%');
     const duration = 2000;
     let startTime = null;
+    
+    // 对于百分比，我们直接从0开始
+    if (isPercent) {
+        element.textContent = '0%';
+    } else if (hasPlus) {
+        element.textContent = '0+';
+    } else {
+        element.textContent = '0';
+    }
     
     function updateCounter(timestamp) {
         if (!startTime) startTime = timestamp;
         const elapsed = timestamp - startTime;
         const progress = Math.min(elapsed / duration, 1);
         
-        let current = progress * target;
+        // 使用缓动函数使动画更自然
+        const easeOutQuart = 1 - Math.pow(1 - progress, 4);
+        let current = easeOutQuart * target;
         
-        if (Number.isInteger(target)) {
+        if (isPercent) {
+            element.textContent = Math.floor(current) + '%';
+        } else if (Number.isInteger(target)) {
             element.textContent = Math.floor(current) + (hasPlus ? '+' : '');
         } else {
             element.textContent = current.toFixed(1) + (hasPlus ? '+' : '');
@@ -500,5 +581,6 @@ window.AboutPage = {
     initTimelineAnimation,
     initLeaderCards,
     initStatsCounter,
-    initScrollAnimation
+    initScrollAnimation,
+    setCurrentYear
 };

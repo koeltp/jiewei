@@ -68,31 +68,62 @@ function closeMobileMenu() {
 // 初始化平滑滚动
 function initSmoothScroll() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        // 排除空锚点和页脚中的外部页面链接
+        if (anchor.getAttribute('href') === '#' || 
+            anchor.getAttribute('href').startsWith('#!') ||
+            anchor.getAttribute('href').includes('.html#')) {
+            return;
+        }
+        
         anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            
             const targetId = this.getAttribute('href');
-            if (targetId === '#') return;
             
-            const targetElement = document.querySelector(targetId);
-            if (targetElement) {
-                const headerHeight = document.querySelector('header').offsetHeight;
-                const targetPosition = targetElement.offsetTop - headerHeight;
+            // 如果是当前页面的锚点
+            if (targetId.startsWith('#')) {
+                e.preventDefault();
                 
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
-                });
-                
-                // 更新URL哈希（不滚动）
-                if (history.pushState) {
-                    history.pushState(null, null, targetId);
-                } else {
-                    location.hash = targetId;
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    // 计算滚动位置（考虑固定导航栏的高度）
+                    const headerHeight = document.querySelector('header').offsetHeight;
+                    const targetPosition = targetElement.offsetTop - headerHeight - 20; // 额外偏移20px
+                    
+                    // 平滑滚动到目标位置
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                    
+                    // 更新URL哈希（不滚动）
+                    if (history.pushState) {
+                        history.pushState(null, null, targetId);
+                    } else {
+                        location.hash = targetId;
+                    }
+                    
+                    // 如果是在移动端，点击后关闭菜单
+                    if (window.innerWidth <= 768) {
+                        closeMobileMenu();
+                    }
                 }
             }
         });
     });
+    
+    // 处理页面加载时的哈希锚点
+    if (window.location.hash) {
+        setTimeout(() => {
+            const targetElement = document.querySelector(window.location.hash);
+            if (targetElement) {
+                const headerHeight = document.querySelector('header').offsetHeight;
+                const targetPosition = targetElement.offsetTop - headerHeight - 20;
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        }, 100);
+    }
 }
 
 // 初始化导航高亮
