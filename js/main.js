@@ -4,6 +4,7 @@
 document.addEventListener('DOMContentLoaded', function() {
 
     // 初始化所有组件
+    initNav(); // 动态生成导航栏
     initNavigation();
     initAnimations();
     initForms();
