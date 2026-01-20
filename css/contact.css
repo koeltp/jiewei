@@ -343,6 +343,33 @@
   color: var(--medium-gray);
   line-height: 1.6;
   font-size: 0.95rem;
+  margin-bottom: 10px;
+}
+
+.transport-item p:last-child {
+  margin-bottom: 0;
+}
+
+.transport-item p:first-child {
+  margin-top: 0;
+}
+
+/* 交通指引列表样式 */
+.transport-list {
+  margin: 10px 0 0 20px;
+  padding: 0;
+  list-style-type: disc;
+  color: var(--medium-gray);
+}
+
+.transport-list li {
+  margin-bottom: 8px;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.transport-list li:last-child {
+  margin-bottom: 0;
 }
 
 /* 部门联系 */

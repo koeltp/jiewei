@@ -318,28 +318,28 @@ function contactDepartment(dept) {
         sales: {
             name: '销售部',
             contact: '张经理',
-            phone: '0512-8888 8888',
+            phone: '0769-8888 8888',
             email: 'sales@jiewei.top',
             hours: '周一至周五 8:00-18:00'
         },
         technical: {
             name: '技术部',
             contact: '李总工程师',
-            phone: '0512-8888 7777',
+            phone: '0769-8888 7777',
             email: 'support@jiewei.top',
             hours: '周一至周五 8:00-18:00'
         },
         quality: {
             name: '质量部',
             contact: '王质量经理',
-            phone: '0512-8888 6666',
+            phone: '0769-8888 6666',
             email: 'quality@jiewei.top',
             hours: '周一至周五 8:00-18:00'
         },
         production: {
             name: '生产部',
             contact: '刘生产总监',
-            phone: '0512-8888 5555',
+            phone: '0769-8888 5555',
             email: 'production@jiewei.top',
             hours: '周一至周六 8:00-20:00'
         }
