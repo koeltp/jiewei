@@ -448,6 +448,19 @@ footer::before {
   margin: 0;
 }
 
+/* 将页脚列表显示为两列 */
+.footer-nav-links {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+}
+
+/* 减小页脚列表项的底部边距和行高 */
+.footer-nav-links li {
+  margin-bottom: 2px !important;
+  line-height: 1.5 !important;
+}
+
 .footer-section a {
   color: rgba(255, 255, 255, 0.85);
   text-decoration: none;
