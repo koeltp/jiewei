@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.jiewei.top/sitemap.xml
+Sitemap: https://jiewei.top/sitemap.xml
