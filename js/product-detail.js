@@ -11,12 +11,10 @@ function loadProducts(productId) {
     fetch('product.json')
         .then(response => response.json())
         .then(data => {
-            // 渲染分类导航
-            renderCategories(data.categories);
-            
             // 加载产品数据
             let product = null;
             let categoryName = '';
+            let categoryId = '';
             
             // 遍历所有分类查找产品
             for (const category of data.categories) {
@@ -24,9 +22,13 @@ function loadProducts(productId) {
                 if (foundProduct) {
                     product = foundProduct;
                     categoryName = category.name;
+                    categoryId = category.id;
                     break;
                 }
             }
+            
+            // 渲染分类导航，并设置当前分类的active状态
+            renderCategories(data.categories, categoryId);
             
             if (product) {
                 displayProduct(product, categoryName);
@@ -35,13 +37,16 @@ function loadProducts(productId) {
         .catch(error => console.error('Error loading products:', error));
 }
 
-function renderCategories(categories) {
+function renderCategories(categories, activeCategoryId = '') {
     const categoryList = document.getElementById('category-list');
     categoryList.innerHTML = '';
     
     categories.forEach((category, index) => {
         const li = document.createElement('li');
         li.className = 'category-item';
+        if (category.id === activeCategoryId) {
+            li.classList.add('active');
+        }
         li.setAttribute('data-category', category.id);
         li.innerHTML = `<a href="product.html?category=${category.id}">${category.name}</a>`;
         categoryList.appendChild(li);

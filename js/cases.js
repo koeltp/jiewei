@@ -9,7 +9,7 @@ const caseDetails = {
         date: "2023年5月",
         complexity: "高精度",
         customer: "某知名汽车制造商",
-        image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        image: "images/product/p1.jpg",
         challenge: `客户需要加工发动机涡轮增压器的核心零件，该零件采用高温合金材料，具有复杂的曲面结构，精度要求达到±0.005mm，表面粗糙度要求Ra0.4μm。零件需要在高温高压环境下长期稳定工作。`,
         solution: `我们采用五轴联动加工中心进行加工，使用专业CAM软件进行编程，优化了刀具路径和切削参数。针对高温合金材料特性，选择了合适的刀具和切削液，并采用分阶段加工策略控制加工变形。`,
         specifications: [
@@ -52,7 +52,7 @@ const caseDetails = {
         date: "2023年3月",
         complexity: "超高精度",
         customer: "某医疗器械公司",
-        image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        image: "images/product/p2.jpg",
         challenge: "医疗器械公司需要开发微创手术器械的精密注塑模具，模具要求具有复杂的内部流道和微细结构，表面需要达到医疗级的镜面抛光效果，且必须满足生物兼容性要求。",
         solution: "我们采用慢走丝线切割和精密电火花加工技术制造核心零件，使用专业的抛光设备进行镜面抛光。在模具设计阶段进行了模流分析和结构优化，确保模具性能和寿命。",
         specifications: [

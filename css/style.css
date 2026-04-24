@@ -535,6 +535,31 @@ footer::before {
   font-size: 0.9rem;
 }
 
+/* 备案信息样式 */
+.copyright p:last-child {
+  margin-top: 10px;
+  line-height: 1.4;
+}
+
+.copyright a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.copyright a:hover {
+  color: var(--white);
+  text-decoration: underline;
+}
+
+.copyright img {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
+  width: 16px;
+  height: 16px;
+}
+
 /* 响应式设计 */
 @media (max-width: 768px) {
   .header-container {
@@ -597,8 +622,7 @@ footer::before {
 
 /* 英雄区域 - 统一样式 */
 .hero {
-  background: linear-gradient(rgba(0, 51, 102, 0.9), rgba(0, 80, 158, 0.85)),
-              url('../images/hero-bg.jpg');
+  background: linear-gradient(rgba(0, 51, 102, 0.9), rgba(0, 80, 158, 0.85));
   background-size: cover;
   background-position: center;
   color: var(--white);
@@ -675,5 +699,62 @@ footer::before {
   .hero-buttons {
     flex-direction: column;
     align-items: center;
+  }
+}
+
+/* 合作伙伴部分样式 */
+.clients {
+  padding: 80px 0;
+  background-color: var(--light-gray);
+}
+
+.clients-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+  align-items: center;
+  justify-items: center;
+}
+
+.client-logo {
+  background-color: var(--white);
+  border-radius: 8px;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 180px;
+  height: 86px;
+}
+
+.client-logo:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.client-logo img {
+  max-width: 160px;
+  max-height: 66px;
+  object-fit: contain;
+  transition: var(--transition);
+}
+
+@media (max-width: 768px) {
+  .clients-grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+  }
+
+  .client-logo {
+    padding: 15px;
+    width: 180px;
+    height: 70px;
+  }
+
+  .client-logo img {
+    max-width: 100%;
+    max-height: 100%;
   }
 }

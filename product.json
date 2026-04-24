@@ -35,7 +35,7 @@
         {
           "id": 3,
           "name": "汽车类产品3",
-          "images": ["images/product/p1.jpg", "images/product/p2.jpg"],
+          "images": ["images/product/p1.jpg", "images/product/p2.jpg", "images/product/p3.jpg","images/product/p4.png"],
           "description": "精密汽车零件，专为高端汽车设计，采用最新制造技术，确保产品的高质量和可靠性。",
           "specs": [
             "材料：铝合金6061",

@@ -66,7 +66,8 @@ function generateNav() {
         a.setAttribute('data-nav-id', link.id);
         
         // 设置当前页面的活动状态
-        if (link.href === currentFilename) {
+        if (link.href === currentFilename || 
+            (currentFilename === 'product-detail.html' && link.href === 'product.html')) {
             a.classList.add('active');
         }
         
