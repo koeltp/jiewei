@@ -633,37 +633,41 @@
     margin-right: 5px;
 }
 
-/* 质量咨询 */
-.quality-consultation {
-    background: linear-gradient(rgba(0, 51, 102, 0.95), rgba(0, 80, 158, 0.95));
-    color: var(--white);
-    padding: 80px 0;
-    text-align: center;
+
+
+
+/* 认证益处样式 */
+.benefits-list {
+    margin: 20px 0;
 }
 
-.consultation-content h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+.benefits-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-.consultation-content p {
-    font-size: 1.2rem;
-    max-width: 800px;
-    margin: 0 auto 40px;
-    opacity: 0.95;
-    line-height: 1.8;
+.benefits-list li {
+    padding: 12px 0;
+    padding-left: 30px;
+    position: relative;
+    border-bottom: 1px dashed var(--border-color);
+    color: var(--dark-gray);
+    line-height: 1.6;
 }
 
-.consultation-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
+.benefits-list li:last-child {
+    border-bottom: none;
 }
 
-.consultation-buttons .btn i {
-    margin-right: 10px;
+.benefits-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    top: 14px;
+    color: var(--accent-blue);
+    font-weight: bold;
+    font-size: 1.1rem;
 }
 
 /* 证书模态框 */
@@ -807,6 +811,17 @@
     color: var(--dark-gray);
     font-size: 0.95rem;
     line-height: 1.5;
+}
+
+.certificate-benefits {
+    margin-top: 40px;
+    text-align: left;
+}
+
+.certificate-benefits h3 {
+    color: var(--primary-blue);
+    margin-bottom: 20px;
+    font-size: 1.4rem;
 }
 
 .certificate-actions {
@@ -956,4 +971,37 @@
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+/* 质量咨询 */
+.quality-consultation {
+    background: linear-gradient(rgba(0, 51, 102, 0.95), rgba(0, 80, 158, 0.95));
+    color: var(--white);
+    padding: 80px 0;
+    text-align: center;
+}
+
+.consultation-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.consultation-content p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    opacity: 0.95;
+    line-height: 1.8;
+}
+
+.consultation-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.consultation-buttons .btn i {
+    margin-right: 10px;
 }
