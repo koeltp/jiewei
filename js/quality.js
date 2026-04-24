@@ -233,16 +233,6 @@ function initDocumentLinks() {
 
 }
 
-
-
-
-
-
-
-
-
-
-
 // 初始化流程动画
 function initProcessAnimation() {
     const processSteps = document.querySelectorAll('.process-step');
@@ -320,8 +310,3 @@ function animateCounter(statItem) {
         }
     }, duration / 50);
 }
-
-
-
-
-

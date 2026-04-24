@@ -117,50 +117,10 @@ function initTimelineAnimation() {
         }
     });
     
-    // 添加展开/收起提示
-    addTimelineExpandHint();
+
 }
 
-// 添加展开/收起提示样式
-function addTimelineExpandHint() {
-    if (document.getElementById('timeline-expand-styles')) return;
-    
-    const styles = document.createElement('style');
-    styles.id = 'timeline-expand-styles';
-    styles.textContent = `
-        .timeline-content {
-            cursor: pointer;
-            position: relative;
-        }
-        
-        .timeline-content::after {
-            content: '点击展开详情';
-            position: absolute;
-            bottom: 10px;
-            right: 10px;
-            font-size: 0.8rem;
-            color: var(--accent-blue);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            background: rgba(255, 255, 255, 0.9);
-            padding: 4px 8px;
-            border-radius: 4px;
-        }
-        
-        .timeline-content:hover::after {
-            opacity: 0.7;
-        }
-        
-        .timeline-content.expanded::after {
-            content: '点击收起详情';
-        }
-        
-        .timeline-content.expanded .timeline-details {
-            overflow: visible;
-        }
-    `;
-    document.head.appendChild(styles);
-}
+
 
 // 领导卡片功能
 function initLeaderCards() {
@@ -287,9 +247,6 @@ function showLeaderDetail(data) {
     
     document.body.appendChild(modal);
     
-    // 添加模态框样式（如果尚未添加）
-    addModalStyles();
-    
     // 显示模态框
     setTimeout(() => {
         modal.classList.add('active');
@@ -325,168 +282,7 @@ function showLeaderDetail(data) {
     });
 }
 
-// 添加模态框样式
-function addModalStyles() {
-    if (document.getElementById('modal-styles')) return;
-    
-    const styles = document.createElement('style');
-    styles.id = 'modal-styles';
-    styles.textContent = `
-        .leader-modal {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
-            z-index: 1100;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity 0.3s ease, visibility 0.3s ease;
-        }
-        
-        .leader-modal.active {
-            opacity: 1;
-            visibility: visible;
-        }
-        
-        .modal-content {
-            background-color: white;
-            border-radius: 15px;
-            max-width: 800px;
-            width: 100%;
-            max-height: 90vh;
-            overflow-y: auto;
-            position: relative;
-            transform: translateY(-20px);
-            transition: transform 0.3s ease;
-        }
-        
-        .leader-modal.active .modal-content {
-            transform: translateY(0);
-        }
-        
-        .modal-close {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            background: none;
-            border: none;
-            font-size: 2rem;
-            color: var(--medium-gray);
-            cursor: pointer;
-            width: 40px;
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 10;
-            transition: color 0.3s ease;
-        }
-        
-        .modal-close:hover {
-            color: var(--accent-blue);
-        }
-        
-        .modal-body {
-            padding: 40px;
-        }
-        
-        .modal-leader {
-            display: grid;
-            grid-template-columns: 300px 1fr;
-            gap: 40px;
-        }
-        
-        .modal-leader-image {
-            border-radius: 10px;
-            overflow: hidden;
-        }
-        
-        .modal-leader-image img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-        
-        .modal-leader-info h2 {
-            font-size: 2rem;
-            color: var(--primary-blue);
-            margin-bottom: 10px;
-        }
-        
-        .modal-leader-title {
-            color: var(--accent-blue);
-            font-weight: 600;
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-        }
-        
-        .modal-leader-experience {
-            color: var(--medium-gray);
-            margin-bottom: 20px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid var(--border-color);
-        }
-        
-        .modal-leader-bio h3,
-        .modal-leader-education h3 {
-            font-size: 1.3rem;
-            color: var(--primary-blue);
-            margin: 20px 0 15px;
-        }
-        
-        .modal-leader-bio p,
-        .modal-leader-education p {
-            color: var(--dark-gray);
-            line-height: 1.7;
-            margin-bottom: 15px;
-        }
-        
-        .modal-leader-education ul {
-            list-style: none;
-            padding-left: 0;
-            margin-top: 15px;
-        }
-        
-        .modal-leader-education li {
-            padding: 8px 0;
-            color: var(--dark-gray);
-            position: relative;
-            padding-left: 25px;
-        }
-        
-        .modal-leader-education li::before {
-            content: '•';
-            position: absolute;
-            left: 0;
-            color: var(--accent-blue);
-            font-size: 1.5rem;
-            line-height: 1;
-        }
-        
-        @media (max-width: 768px) {
-            .modal-leader {
-                grid-template-columns: 1fr;
-            }
-            
-            .modal-leader-image {
-                max-width: 300px;
-                margin: 0 auto;
-            }
-            
-            .modal-body {
-                padding: 30px 20px;
-            }
-        }
-    `;
-    
-    document.head.appendChild(styles);
-}
+
 
 // 统计数字动画
 function initStatsCounter() {
