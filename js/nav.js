@@ -18,19 +18,24 @@ const navLinks = [
         id: 'capabilities'
     },
     {
-        href: 'services.html',
-        text: '产品服务',
+        href: 'product.html',
+        text: '产品展示',
         id: 'services'
     },
     {
         href: 'cases.html',
-        text: '成功案例',
+        text: '客户案例',
         id: 'cases'
     },
     {
         href: 'quality.html',
         text: '质量体系',
         id: 'quality'
+    },
+    {
+        href: 'recruitment.html',
+        text: '人才招聘',
+        id: 'recruitment'
     },
     {
         href: 'contact.html',

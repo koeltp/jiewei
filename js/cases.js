@@ -1,4 +1,4 @@
-// js/cases.js - 成功案例页面功能
+// js/cases.js - 客户案例页面功能
 
 // 案例数据
 const caseDetails = {

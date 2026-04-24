@@ -1,31 +1,5 @@
 /* css/about.css - 关于我们页面专用样式 */
 
-/* 页面标题部分 */
-.page-hero {
-  background:
-    linear-gradient(rgba(0, 51, 102, 0.9), rgba(0, 80, 158, 0.9)),
-    url("https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80");
-  background-size: cover;
-  background-position: center;
-  color: white;
-  padding: 100px 0 60px;
-  text-align: center;
-}
-
-.page-hero h1 {
-  font-size: 3rem;
-  margin-bottom: 20px;
-  font-weight: 700;
-}
-
-.page-hero p {
-  font-size: 1.3rem;
-  max-width: 800px;
-  margin: 0 auto;
-  opacity: 0.95;
-  line-height: 1.6;
-}
-
 /* 公司简介 */
 .company-intro {
   padding: 80px 0;
@@ -118,6 +92,7 @@
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
 }
 
 .intro-image img {
@@ -937,18 +912,6 @@
 
 /* 响应式调整 */
 @media (max-width: 768px) {
-  .page-hero {
-    padding: 80px 0 40px;
-  }
-
-  .page-hero h1 {
-    font-size: 2.2rem;
-  }
-
-  .page-hero p {
-    font-size: 1.1rem;
-  }
-
   .company-intro,
   .timeline-section,
   .leadership-section,
@@ -980,10 +943,6 @@
 }
 
 @media (max-width: 576px) {
-  .page-hero h1 {
-    font-size: 1.8rem;
-  }
-
   .intro-highlights {
     grid-template-columns: 1fr;
   }
