@@ -246,12 +246,140 @@
 }
 
 @media (max-width: 768px) {
+    .product-detail {
+        padding: 40px 0;
+    }
+    
+    .breadcrumb {
+        display: none;
+    }
+    
+    .product-layout {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .product-sidebar {
+        width: 100%;
+        order: 1;
+    }
+    
     .product-content {
+        width: 100%;
         padding: 20px;
+        order: 2;
+    }
+    
+    .category-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    
+    .category-item {
+        flex: 1;
+        min-width: 120px;
+    }
+    
+    .category-item a {
+        text-align: center;
     }
     
     .slider {
-        height: 300px;
+        height: 250px;
+    }
+    
+    .product-info h1 {
+        font-size: 20px;
+    }
+    
+    .product-description {
+        font-size: 14px;
+    }
+    
+    .product-specs h3 {
+        font-size: 16px;
+    }
+    
+    .product-specs li {
+        font-size: 14px;
+    }
+    
+    .slider-controls {
+        padding: 0 10px;
+    }
+    
+    .slider-btn {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .modal-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+    
+    .modal-btn.prev {
+        left: 10px;
+    }
+    
+    .modal-btn.next {
+        right: 10px;
+    }
+    
+    .modal-close {
+        top: 10px;
+        right: 20px;
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-detail {
+        padding: 30px 0;
+    }
+    
+    .product-content {
+        padding: 15px;
+    }
+    
+    .slider {
+        height: 200px;
+    }
+    
+    .product-info h1 {
+        font-size: 18px;
+    }
+    
+    .product-description {
+        font-size: 13px;
+    }
+    
+    .product-specs {
+        padding: 15px;
+    }
+    
+    .product-specs h3 {
+        font-size: 15px;
+    }
+    
+    .product-specs li {
+        font-size: 13px;
+        padding-left: 15px;
+    }
+    
+    .slider-indicators {
+        bottom: 10px;
+    }
+    
+    .indicator {
+        width: 8px;
+        height: 8px;
+    }
+    
+    .indicator.active {
+        width: 16px;
     }
 }
 
