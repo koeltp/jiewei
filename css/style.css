@@ -264,9 +264,18 @@ html, body {
 header {
   background-color: var(--white);
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 1000;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* 为页面内容添加顶部间距，避免被固定导航遮挡 */
+body {
+  padding-top: 80px;
 }
 
 .header-container {
