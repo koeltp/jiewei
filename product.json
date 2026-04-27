@@ -7,7 +7,7 @@
         {
           "id": 1,
           "name": "汽车类产品1",
-          "images": ["images/product/p1.jpg", "images/product/p2.jpg"],
+          "images": ["images/product/p1.jpg", "images/product/p2.jpg", "images/product/p3.jpg","images/product/p4.png"],
           "description": "本产品是一款高精度汽车零部件，采用先进的CNC加工技术制造，具有优异的性能和可靠性。产品采用优质材料，经过严格的质量控制流程，确保每一个零件都达到最高标准。",
           "specs": [
             "材料：高强度合金钢",
