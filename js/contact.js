@@ -70,7 +70,7 @@ function initAddressCopy() {
 
 // 从地图区域复制地址
 function copyAddressFromMap() {
-    const address = '东莞市石碣镇金滩路24号102室';
+    const address = '东莞市石碣镇金滩路24号';
     
     navigator.clipboard.writeText(address).then(() => {
         // 显示成功反馈
@@ -125,7 +125,7 @@ function copyAddressFromMap() {
 
 // 打开外部地图
 function openExternalMap() {
-    const address = encodeURIComponent('东莞市石碣镇金滩路24号102室');
+    const address = encodeURIComponent('东莞市石碣镇金滩路24号');
     const baiduMapUrl = `https://map.baidu.com/?newmap=1&ie=utf-8&s=s%26wd%3D${address}`;
     
     window.open(baiduMapUrl, '_blank');

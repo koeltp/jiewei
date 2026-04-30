@@ -90,7 +90,7 @@ const caseDetails = {
     
     case3: {
         title: "智能手机精密结构件注塑模具",
-        industry: "消费电子",
+        industry: "自动化零配件",
         service: "模具制造",
         date: "2023年1月",
         complexity: "中精度",
@@ -492,7 +492,7 @@ function getIndustryName(code) {
     const industries = {
         automotive: '汽车行业',
         medical: '医疗器械',
-        electronics: '消费电子',
+        electronics: '自动化零配件',
         communication: '通信设备',
         aerospace: '航空航天'
     };
